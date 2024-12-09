@@ -1,4 +1,4 @@
-import { assertEquals } from "@std/assert";
+import { assertEquals, assertThrows } from "@std/assert";
 import { add, div, intDiv, sub } from "./main.ts";
 
 Deno.test(function addTest() {
@@ -19,4 +19,10 @@ Deno.test(function divTest() {
 
 Deno.test(function intDivTest() {
   assertEquals(intDiv(3, 2), 1);
+});
+
+Deno.test(function intDiv0Test() {
+  assertThrows(() => {
+    intDiv(3, 0);
+  });
 });
