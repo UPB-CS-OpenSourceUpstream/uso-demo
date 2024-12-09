@@ -15,11 +15,9 @@ export function div(a: number, b: number): number {
 
 // function divides two integer numbers
 export function intDiv(a: number, b: number): number {
-  if (b==0) {
+  if (b == 0) {
     throw "divisomn by 0";
-  }
-  else
-  {
+  } else {
     return Math.floor(a / b);
   }
 }
